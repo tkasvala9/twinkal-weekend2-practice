@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserDataServiceService } from './user-data-service.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,16 +11,16 @@ export class AppComponent {
   title = 'my-first-app';
   
   constructor(public us:UserDataServiceService){}
-  numarray:any=[]
-  t:any;
-  i:any;
-  cratetable(value:any){
-    
-    for(let i=1;i<=10;i++){
-      this.t=(value*i);
-      this.numarray[i]=value +" "+"*"+" "+i+" "+"="+" "+this.t;
-      console.log(this.numarray[i]);
-        }
-        
+  users = {
+    "firstname": '',
+    "lastname": '',
+    "phone": '',
+    "email": ''
+  }
+  onsubmitofform(users: any) {
+    this.users = users;
+    // this.us.sendData(this.users);
+    this.us.users = users;
+    console.log(this.us.users);
   }
 }

@@ -1,4 +1,20 @@
-<div class="container">
-Enter Number:<input type="number" #num><br><br>
-<button (click)="cratetable(num.value)">sbumit</button>
-</div>
+<form #myForm="ngForm" (ngSubmit)="onsubmitofform(myForm.value)">
+    <div class="row">
+      <div class="col">Enter FirstName :
+        <input type="text" class="form-control" placeholder="First name" [ngModel]="users.firstname" name="firstname"
+          required>
+      </div>
+      <div class="col">Enter LastName :
+        <input type="text" class="form-control" placeholder="Last name" [ngModel]="users.lastname" name="lastname"
+          required>
+      </div>
+      <div class="col">Enter Phone :
+        <input type="text" class="form-control" placeholder="phone" [ngModel]="users.phone" name="phone" required>
+      </div>
+      <div class="col">Enter Email :
+        <input type="text" class="form-control" placeholder="email" [ngModel]="users.email" name="email" required>
+      </div>
+    </div><br>
+    <button type="submit">submit</button>
+  </form><br><br>
+  <app-header></app-header>

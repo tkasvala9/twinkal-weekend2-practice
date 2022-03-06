@@ -6,5 +6,15 @@ import { Injectable } from '@angular/core';
 export class UserDataServiceService {
 
   constructor() { }
+  users={
+    "firstname":'',
+  "lastname":'',
+  "phone":'',
+  "email":''
+  };
+  sendData(users:any){
+    this.users=users;
+    console.log(this.users);
+  }
 
 }
