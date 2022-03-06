@@ -12,9 +12,8 @@ export class AppComponent {
   
   constructor(public us:UserDataServiceService){}
   users = {
-    "firstname": '',
-    "lastname": '',
-    "phone": '',
+    
+    "password": '',
     "email": ''
   }
   onsubmitofform(users: any) {

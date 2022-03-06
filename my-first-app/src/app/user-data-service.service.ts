@@ -7,9 +7,8 @@ export class UserDataServiceService {
 
   constructor() { }
   users={
-    "firstname":'',
-  "lastname":'',
-  "phone":'',
+    
+  "password":'',
   "email":''
   };
   sendData(users:any){
