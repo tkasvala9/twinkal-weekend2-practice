@@ -6,6 +6,5 @@ import { Injectable } from '@angular/core';
 export class UserDataServiceService {
 
   constructor() { }
-  today = new Date();
-  numarray=[10,20,30];
+
 }
