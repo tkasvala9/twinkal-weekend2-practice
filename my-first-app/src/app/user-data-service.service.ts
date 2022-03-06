@@ -10,5 +10,8 @@ export class UserDataServiceService {
   getdata() {
     return this.ht.get("http://localhost:3000/posts");
   }
+  sendpost(data:any){
+    return this.ht.post("http://localhost:3000/posts",data);
+  }
   
 }
